@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root version="3.0" logo="logo.png">
+	<!-- To customize this extension for your own custom desktop decals, update each of the TODO sections below. -->
+
+	<!-- TODO - Change announcement text; as desired -->
+	<announcement text="An 8-bit Adventure custom desktop decal" font="emotefont" />
+
+	<!-- TODO - Change property name, version, author and description; as desired -->
+	<properties>
+		<name>An 8-bit Adventure custom desktop decal</name>
+		<version>1.0</version>
+		<author>JiFish</author>
+		<description>Adds custom decal to ruleset</description>
+		<loadorder>99</loadorder>
+	</properties>
+
+	<base>
+		<!-- TODO - Change string name attribute to avoid overwriting strings from other custom decal extensions -->
+		<!-- TODO - Change string optino text -->
+		<!-- Custom theme option strings -->
+		<string name="option_val_DDCL_8bit_advent">8-bit Advent</string>
+		
+		<!-- TODO - Change icon name attribute to avoid overwriting icons from other custom decal extensions -->
+		<!-- TODO - Change icon file attribute to point to the correct file within the extension -->
+		<!-- Custom theme textures -->
+		<icon name="decal_8bit_advent" file="graphics/decals/8bit-advent-decal.png" />
+
+		<!-- TODO - Change script name attribute to avoid overwriting scripts from other custom decal extensions -->
+		<!-- TODO - You can add multiple option values. You just need to define the string and icon to use for each one,
+				then call OptionsManager.addOptionValue with the correct values -->
+		<script name="DecalCustom">
+			function onInit()
+				OptionsManager.addOptionValue("DDCL", "option_val_DDCL_8bit_advent", "decal_8bit_advent", true);
+			end
+		</script>
+	</base>
+</root>
